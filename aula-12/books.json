@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Dom Quixote",
+        "author": "Miguel de Cervantes",
+        "genre": "Ficção",
+        "year": 1605,
+        "rating": 5
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "genre": "Ficção Científica",
+        "year": 1949,
+        "rating": 4
+    }
+]

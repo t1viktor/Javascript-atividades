@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Livros Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #bookList {
+            margin-top: 20px;
+        }
+        .book-item {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .book-item h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Catálogo de Livros Online</h1>
+
+    <div id="bookForm">
+        <h2>Adicionar Novo Livro</h2>
+        <div class="form-group">
+            <label for="title">Título:</label>
+            <input type="text" id="title">
+        </div>
+        <div class="form-group">
+            <label for="author">Autor:</label>
+            <input type="text" id="author">
+        </div>
+        <div class="form-group">
+            <label for="genre">Gênero:</label>
+            <input type="text" id="genre">
+        </div>
+        <div class="form-group">
+            <label for="year">Ano de Publicação:</label>
+            <input type="number" id="year">
+        </div>
+        <div class="form-group">
+            <label for="rating">Avaliação:</label>
+            <input type="number" id="rating" min="1" max="5">
+        </div>
+        <button onclick="addBook()">Adicionar Livro</button>
+    </div>
+
+    <div id="searchForm">
+        <h2>Buscar Livros</h2>
+        <div class="form-group">
+            <label for="searchQuery">Pesquisar por Título, Autor ou Gênero:</label>
+            <input type="text" id="searchQuery" oninput="searchBooks()">
+        </div>
+    </div>
+
+    <div id="sortOptions">
+        <h2>Classificar Livros</h2>
+        <select id="sortCriteria" onchange="sortBooks()">
+            <option value="title">Título</option>
+            <option value="author">Autor</option>
+            <option value="year">Ano</option>
+            <option value="rating">Avaliação</option>
+        </select>
+    </div>
+
+    <div id="bookList">
+        <h2>Lista de Livros</h2>
+        <div id="books"></div>
+    </div>
+
+    <script src="aula-12.js"></script>
+</body>
+</html>
