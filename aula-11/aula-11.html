@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 10px 0;
+        }
+        .options button {
+            padding: 10px 20px;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .options button:hover {
+            background-color: #0056b3;
+        }
+        #feedback {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #reloadBtn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+        #reloadBtn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz de Personagens Históricos</h1>
+        <div id="question-container">
+            <p id="question"></p>
+            <ul class="options">
+                <li><button onclick="checkAnswer(0)">Opção 1</button></li>
+                <li><button onclick="checkAnswer(1)">Opção 2</button></li>
+                <li><button onclick="checkAnswer(2)">Opção 3</button></li>
+                <li><button onclick="checkAnswer(3)">Opção 4</button></li>
+            </ul>
+            <div id="feedback"></div>
+            <button id="reloadBtn" onclick="location.reload()">Recarregar</button>
+        </div>
+    </div>
+    <script src="aula-11.js"></script>
+</body>
+</html>
